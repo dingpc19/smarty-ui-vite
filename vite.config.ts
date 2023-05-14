@@ -6,6 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 const rollupOptions = {
   external: ['vue', 'vue-router'],
   output: {
+    exports: 'named' as 'named',
     globals: {
       vue: 'Vue'
     }
