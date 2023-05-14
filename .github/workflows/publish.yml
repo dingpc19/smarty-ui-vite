@@ -21,7 +21,7 @@ jobs:
       - name: 'Publish to the npm registry'
         uses: 'primer/publish@3.0.0'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         with:
           default_branch: 'publish-smarty-ui-vite'
