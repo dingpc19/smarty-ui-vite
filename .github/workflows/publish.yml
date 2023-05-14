@@ -19,9 +19,10 @@ jobs:
       - name: Build
         run: npm run build
       - name: 'Publish to the npm registry'
-        uses: 'primer/publish@3.0.0'
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        uses: actions/setup-node@v3
         with:
-          default_branch: 'publish-smarty-ui-vite'
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm publish
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
