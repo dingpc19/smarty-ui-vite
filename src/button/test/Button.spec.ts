@@ -45,7 +45,7 @@ describe("color", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("bg-red-500")
+        .includes("bg-red-5001")
     ).toBe(true);
   });
 });
