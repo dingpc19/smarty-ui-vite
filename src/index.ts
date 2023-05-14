@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 
-import SFCButton from './SFCButton.vue'
+import JSXButton from './JSXButton'
+// import SFCButton from './SFCButton.vue'
 
-createApp(SFCButton).mount('#app')
+createApp(JSXButton).mount('#app')
