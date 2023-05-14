@@ -8,10 +8,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
-    name: 'publish npm1'
-
-    environment: npm
-
     steps:
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.1.0
