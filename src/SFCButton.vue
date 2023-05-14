@@ -9,8 +9,8 @@
 </template>
 <script>
 export default {
-  name: 'SFCButton'
-}
+  name: "SFCButton",
+};
 </script>
 <script setup lang="ts"></script>
 

@@ -1,11 +1,4 @@
-import { defineComponent, h } from 'vue'
+import Button from "./Button";
 
-export default defineComponent({
-  name: 'MyButton',
-
-  // template:'<button>MyButton</button>'
-
-  render() {
-    return h('button', null, 'MyButton')
-  }
-})
+// 导出Button组件
+export default Button;
