@@ -1,7 +1,7 @@
 import { defineComponent, h } from 'vue'
 
 export default defineComponent({
-  name: 'SButton',
+  name: 'MyButton',
 
   // template:'<button>MyButton</button>'
 

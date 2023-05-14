@@ -7,7 +7,11 @@
 <template>
   <div>SFCButton.vue</div>
 </template>
-
+<script>
+export default {
+  name: 'SFCButton'
+}
+</script>
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>
