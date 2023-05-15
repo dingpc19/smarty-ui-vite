@@ -20,7 +20,7 @@ export default async () => {
   log("🚌 创建项目:" + name);
 
   // 从github克隆项目到指定文件夹
-  await clone("github:smarty-team/smarty-ui-app-js-template", name);
+  await clone("direct：http://192.168.1.114:2030/dpc/smarty-ui-template.git#main", name);
 
   // 生成路由定义
   compile(
