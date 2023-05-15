@@ -1,0 +1,27 @@
+name: Publish Smarty-ui-vite To Npm
+
+on:
+  push:
+    branches: [publish-smarty-ui-vite]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.31.0
+      - name: Install modules
+        run: pnpm install
+      - name: Build
+        run: npm run build
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: 'Publish to the npm registry'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
