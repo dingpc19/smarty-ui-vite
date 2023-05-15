@@ -15,7 +15,7 @@ const rollupOptions = {
   },
 };
 
-export default defineConfig({
+export const config = {
   plugins: [
     vue(),
     vueJsx({
@@ -39,6 +39,7 @@ export default defineConfig({
       // 导出模块格式
       formats: ["es", "umd", "iife"],
     },
+    outDir: "./dist",
   },
   test: {
     // enable jest-like global test APIs
@@ -51,4 +52,6 @@ export default defineConfig({
       web: [/.[tj]sx$/],
     },
   },
-});
+};
+
+export default defineConfig(config as any);

@@ -5,18 +5,18 @@
   import SmartyUI, {
     SFCButton,
     JSXButton,
-    MyButton
+    SmartyButton
   } from '../../dist/smarty-ui.mjs'
 
   createApp({
     template: `
-<MyButton/>
+<SmartyButton/>
 <JSXButton/>
 <SFCButton/>
 `
   })
     .component(SFCButton.name, SFCButton)
     .component(JSXButton.name, JSXButton)
-    .component(MyButton.name, MyButton)
+    .component(SmartyButton.name, MyButton)
     .mount('#app')
 </script>

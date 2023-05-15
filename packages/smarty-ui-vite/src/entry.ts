@@ -1,5 +1,5 @@
 import { App } from "vue";
-import SmartyButton from "./button";
+import { Button as SmartyButton } from "./button";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
 import "uno.css";
