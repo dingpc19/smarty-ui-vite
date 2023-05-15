@@ -2,7 +2,7 @@ name: Monorepo To Npm
 
 on:
   push:
-    branches: [Monorepo]
+    branches: [master]
 
 jobs:
   publish:
