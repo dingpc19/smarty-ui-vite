@@ -16,7 +16,7 @@ jobs:
         run: pnpm install
       - name: Build
         run: npm run build
-      - name: Setup Node1
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
