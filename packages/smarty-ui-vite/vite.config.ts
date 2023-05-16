@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "./config/unocss";
+import dts from "vite-plugin-dts";
 // https://vitejs.dev/config/
 const rollupOptions = {
   external: ["vue", "vue-router"],
@@ -23,6 +24,11 @@ export const config = {
     }),
     // 添加UnoCSS插件
     Unocss(),
+    dts({
+      outputDir: "./dist/types",
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
+    }),
   ],
   // 添加库模式配置
 

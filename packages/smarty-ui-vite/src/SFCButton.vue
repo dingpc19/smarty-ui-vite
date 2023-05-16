@@ -1,17 +1,11 @@
-<!--
- * new page
- * @author: dingpengcheng
- * @since: 2023-05-14
- * SFCButton.vue
--->
 <template>
-  <div>SFCButton.vue</div>
+  <button>SFC Button</button>
 </template>
-<script>
-export default {
-  name: "SFCButton",
-};
-</script>
-<script setup lang="ts"></script>
 
-<style lang="scss" scoped></style>
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "SFCButton",
+});
+</script>
