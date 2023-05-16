@@ -1,0 +1,30 @@
+name: Monorepo To Npm
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    name: 'publish npm'
+
+    environment: npm
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.31.0
+      - name: Install modules
+        run: pnpm install
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: 'Publish to the npm registry'
+        run: cd packages/smarty-ui-vite && npm run pub:ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
