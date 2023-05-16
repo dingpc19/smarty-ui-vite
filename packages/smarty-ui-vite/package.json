@@ -1,6 +1,6 @@
 {
   "name": "dpc-ui-vite",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "main": "smarty-ui.umd.js",
   "module": "smarty-ui.mjs",
