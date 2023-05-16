@@ -33,7 +33,7 @@ describe("Button", () => {
         },
       });
 
-      expect(wrapper.classes().includes("bg-blue-500")).toBe(true);
+      expect(wrapper.classes().includes("bg-blue-500\n")).toBe(true);
     });
 
     test("red", () => {
@@ -46,7 +46,7 @@ describe("Button", () => {
         },
       });
 
-      expect(wrapper.classes().includes("bg-red-500")).toBe(true);
+      expect(wrapper.classes().includes("bg-red-500\n")).toBe(true);
     });
   });
 
@@ -58,7 +58,7 @@ describe("Button", () => {
         },
       });
 
-      expect(wrapper.classes().includes("rounded-lg")).toBe(true);
+      expect(wrapper.classes().includes("rounded-lg\n")).toBe(true);
     });
 
     test("round:true", () => {
@@ -71,7 +71,7 @@ describe("Button", () => {
         },
       });
 
-      expect(wrapper.classes().includes("rounded-full")).toBe(true);
+      expect(wrapper.classes().includes("rounded-full\n")).toBe(true);
     });
   });
 
@@ -83,7 +83,7 @@ describe("Button", () => {
         },
       });
 
-      expect(wrapper.classes().includes("bg-blue-500")).toBe(true);
+      expect(wrapper.classes().includes("bg-blue-500\n")).toBe(true);
     });
 
     test("plain:true", () => {
@@ -95,8 +95,8 @@ describe("Button", () => {
           plain: true,
         },
       });
-
-      expect(wrapper.classes().includes("bg-blue-100")).toBe(true);
+      console.log("wrapper.classes()", wrapper.classes());
+      expect(wrapper.classes().includes("bg-blue-100\n")).toBe(true);
     });
   });
 

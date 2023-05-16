@@ -41,7 +41,7 @@ export const props = {
 } as const;
 
 export default defineComponent({
-  name: "SButton",
+  name: "SmartyButton",
   props,
   setup(props, { slots }) {
     console.log(`html`, document.querySelector(`#app`)?.innerHTML);

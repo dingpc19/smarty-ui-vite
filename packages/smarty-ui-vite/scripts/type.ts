@@ -50,7 +50,8 @@ function generateCode(meta, filePath, templatePath) {
  * 通过解析entry.ts模块获取组件数据
  */
 async function getComponents(input) {
-  const entry = await import((isWindows() ? "file://" : "") + input);
+  const prefix = isWindows() ? "file://" : "";
+  const entry = await import(prefix + input);
   return Object.keys(entry)
     .filter((k) => k !== "default")
     .map((k) => ({
